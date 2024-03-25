@@ -19,7 +19,7 @@ foreach $l (@ls) {
     $r2=~s/sam/bam/;
     $r2=~s/bwa_files/bam_files/;
 	
-    $cmd = "samtools view -@ 4 -S -b $r1 -o $r2";
+    $cmd = "samtools view -@ 4 -S -b $r1 -o $r2"; # argumento -@: numero de threads, no exemplo 4 threads sao chamadas
     #print $cmd\n;  # confere o comando 
     `$cmd`;
     $pm -> finish;
